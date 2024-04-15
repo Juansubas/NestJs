@@ -35,6 +35,10 @@ export class TaskController{
 
     @Put(':id')
     async updateTask(@Param('id') id: string, @Body() data: Task){
-        return await this.tasksService.updateTask(Number(id), data);
+        try {
+            return await this.tasksService.updateTask(Number(id), data);
+        } catch (error) {
+            throw new NotFoundException('Task does not exist'); 
+        }
     }
 }
