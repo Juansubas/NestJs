@@ -7,7 +7,19 @@ export class TasksService {
         return ['Task 1', 'Task 2', 'Task 3'];
     }
 
-    testing() {
-        return 'test!!!';
+    createTask() {
+        return 'Creando Tareas';
+    }
+
+    updateTask() {
+        return 'Actualizando Tareas';
+    }
+
+    deleteTask() {
+        return 'Eliminando Tarea';
+    }
+
+    updateTaskStatus() {
+        return 'Actualizando parcialmente Tareas';
     }
 }
