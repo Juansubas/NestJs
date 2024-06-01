@@ -8,15 +8,16 @@ export interface User {
 @Injectable()
 export class TasksService {
 
-    getTasks() : User {
-        return {
-            name: 'John Doe',
-            age: 40
-        };
+    private tasks = [];
+
+    getTasks() {
+        return this.tasks;
     }
 
-    createTask() {
-        return 'Creando Tareas';
+    createTask(task : any) {
+        console.log(task);
+        this.tasks.push(task);
+        return task;
     }
 
     updateTask() {
