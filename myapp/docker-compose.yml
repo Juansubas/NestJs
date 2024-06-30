@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    container_name: postgres_container
+    environment:
+      - POSTGRES_USER=juansubas
+      - POSTGRES_PASSWORD=juansubaspassword
+      - POSTGRES_DB=nestdb
+    ports:
+      - "5499:5432"
